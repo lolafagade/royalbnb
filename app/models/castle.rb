@@ -1,3 +1,3 @@
 class Castle < ApplicationRecord
-  belongs_to :princess
+  belongs_to :user
 end

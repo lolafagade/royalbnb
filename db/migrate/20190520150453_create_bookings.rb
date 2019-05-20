@@ -5,7 +5,7 @@ class CreateBookings < ActiveRecord::Migration[5.2]
       t.date :chech_out_date
       t.integer :total_price
       t.string :status
-      t.references :princess, foreign_key: true
+      t.references :user, foreign_key: true
       t.references :castle, foreign_key: true
 
       t.timestamps

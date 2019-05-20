@@ -9,7 +9,7 @@ class CreateCastles < ActiveRecord::Migration[5.2]
       t.string :vehicle
       t.string :photo
       t.integer :price_per_night
-      t.references :princess, foreign_key: true
+      t.references :user, foreign_key: true
 
       t.timestamps
     end

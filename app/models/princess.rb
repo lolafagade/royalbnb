@@ -1,2 +1,0 @@
-class Princess < ApplicationRecord
-end

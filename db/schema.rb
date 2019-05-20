@@ -20,12 +20,12 @@ ActiveRecord::Schema.define(version: 2019_05_20_150453) do
     t.date "chech_out_date"
     t.integer "total_price"
     t.string "status"
-    t.bigint "princess_id"
+    t.bigint "user_id"
     t.bigint "castle_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["castle_id"], name: "index_bookings_on_castle_id"
-    t.index ["princess_id"], name: "index_bookings_on_princess_id"
+    t.index ["user_id"], name: "index_bookings_on_user_id"
   end
 
   create_table "castles", force: :cascade do |t|
@@ -37,19 +37,10 @@ ActiveRecord::Schema.define(version: 2019_05_20_150453) do
     t.string "vehicle"
     t.string "photo"
     t.integer "price_per_night"
-    t.bigint "princess_id"
+    t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["princess_id"], name: "index_castles_on_princess_id"
-  end
-
-  create_table "princesses", force: :cascade do |t|
-    t.string "name"
-    t.string "email"
-    t.string "password"
-    t.string "avatar"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_castles_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -65,6 +56,6 @@ ActiveRecord::Schema.define(version: 2019_05_20_150453) do
   end
 
   add_foreign_key "bookings", "castles"
-  add_foreign_key "bookings", "princesses"
-  add_foreign_key "castles", "princesses"
+  add_foreign_key "bookings", "users"
+  add_foreign_key "castles", "users"
 end
