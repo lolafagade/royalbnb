@@ -1,0 +1,13 @@
+.btn-homepage {
+  border-radius: 30px;
+  background-color: #ff78ae;
+  padding: 5px 10px;
+  color: white;
+  border: 1px solid white;
+  &:hover {
+    color: #fff8cd;
+    text-decoration: none;
+    background-color: #ffa0d2;
+  }
+}
+

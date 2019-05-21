@@ -1,2 +1,13 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+
+<%#= cl_image_tag("atgy1d9kyhm3dgpkt6xg.jpg",
+width: 400, height: 300, crop: :fill) %>
+
+
+<div class="banner" style="background-image: linear-gradient(rgba(255,255,255,0.6),rgba(255,255,255,0.6)), url(https://res.cloudinary.com/dl0kdumil/image/upload/v1558463622/atgy1d9kyhm3dgpkt6xg.jpg);">
+  <div class="container">
+    <div class="front-gimmick">RoyalBnB</div>
+    <div><h1>Escape your castle, go see the world</h1></div>
+
+    <div><a class="btn-homepage" href="<%= castles_path %>">Let's go</a></div>
+  </div>
+</div>

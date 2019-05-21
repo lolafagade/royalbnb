@@ -1,0 +1,34 @@
+.banner {
+  background-size: cover;
+  background-position: center;
+  padding: 150px 0;
+  height: 100vh;
+}
+
+.banner h1 {
+  margin: 0;
+  color: #ff78ae;
+  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.banner a {
+  margin-top: 30px;
+}
+
+// .banner p {
+//   font-size: 20px;
+//   color: white;
+//   opacity: .7;
+//   // text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+// }
+
+.front-gimmick {
+  color: white;
+  font-family: 'Macondo Swash Caps', cursive;
+  font-size: 50px;
+  text-shadow: -2px 0 #ff78ae, 0 2px #ff78ae, 2px 0 #ff78ae, 0 -2px #ff78ae;
+
+}
