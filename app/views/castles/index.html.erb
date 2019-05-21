@@ -1,0 +1,24 @@
+<div>
+  <h1>Welcome to Royal BNB</h1>
+  <p>Come into the castle of your choice</p>
+
+
+      <%#= cl_image_tag ("zchftnfqqiy3zzzlsswe.jpg") %>
+<% @castles.each do |castle| %>
+  <div class="card-category" style="background-image: linear-gradient (#fff8cd, #fff8cd)">
+      <p><%= castle.name %></p>
+
+      <!-- <p><%= castle.price_per_night %></p> -->
+
+      <%#= cl_image_tag castle.photo, height: 300, width: 400, crop: :fill %>
+      <%#= cl_image_tag castle.user.avatar, height: 300, width: 400, crop: :fill %>
+  <% end %>
+  </div>
+      <div>
+
+
+
+
+
+<%= link_to "For more details", castles_path(@castles) %>
+
