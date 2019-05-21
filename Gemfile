@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 ruby '2.5.3'
 
+
 gem 'carrierwave', '~> 1.2'
 gem 'cloudinary', '~> 1.9.1'
 gem 'bootsnap', require: false
@@ -9,6 +10,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'pg', '~> 0.21'
 gem 'puma'
 gem 'rails', '5.2.3'
+
 gem 'redis'
 
 gem 'autoprefixer-rails'
@@ -30,4 +32,3 @@ group :development, :test do
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'dotenv-rails'
 end
-
