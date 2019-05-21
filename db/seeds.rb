@@ -31,4 +31,3 @@ ariel_castle = Castle.create!(name: "Triton's Castle", description: "Underwater 
 
 snowwhite_castle = Castle.create!(name: "Forest Cottage", description: "A lovely cottage in the forest, where you'll sing happily with all you animal friends.",
   location: 'Magic Forest', equipment: 'Seven dwarfs', price_per_night: '3', user_id: snowwhite.id, photo: 'ooxbjzljcazjqlhqesnz.jpg')
-Collapse
