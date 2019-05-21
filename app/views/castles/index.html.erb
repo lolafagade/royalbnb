@@ -5,16 +5,12 @@
 
       <%#= cl_image_tag ("zchftnfqqiy3zzzlsswe.jpg") %>
 <% @castles.each do |castle| %>
-  <div class="card-category" style="background-image: linear-gradient (#fff8cd, #fff8cd)">
-      <p><%= castle.name %></p>
+  <div class="card-category"style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+  url('<%= cl_image_path castle.photo, height: 300, width: 400, crop: :fill %>')">
+     <strong><h1><%= castle.name%></h1></strong>
 
-      <!-- <p><%= castle.price_per_night %></p> -->
-
-      <%#= cl_image_tag castle.photo, height: 300, width: 400, crop: :fill %>
-      <%#= cl_image_tag castle.user.avatar, height: 300, width: 400, crop: :fill %>
-  <% end %>
-  </div>
-      <div>
+       </div>
+<% end %>
 
 
 
