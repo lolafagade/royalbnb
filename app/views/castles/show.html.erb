@@ -1,0 +1,61 @@
+<%= link_to "Back to homepage", root_path %>
+
+<div class="container">
+  <div class="row">
+    <div class="col-12 display-photos"><%= cl_image_tag @castle.photo%></div>
+    <div class="col-8"><h1><%= @castle.name %></h1>
+      <p><%= @castle.description %></p>
+      <i class="fas fa-toolbox icon"></i> <%= @castle.equipment %></p><p><i class="fas fa-car icon"></i> <%= @castle.vehicle %></p>
+      <p><i class="fas fa-frog icon"></i> <%= @castle.prince %></p>
+      <%= cl_image_tag @castle.user.avatar, height: 200, width: 200, crop: :fill %>
+    </div>
+    <div class="col-4">
+      <div class="booking-form">
+        <form>
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="form-group">
+                <span class="form-label">Check In</span>
+                <input class="form-control" type="date" required>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="form-group">
+                <span class="form-label">Check out</span>
+                <input class="form-control" type="date" required>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-4">
+              <div class="form-group">
+                <span class="form-label">Rooms</span>
+                <select class="form-control">
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                </select>
+                <span class="select-arrow"></span>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="form-group">
+                <span class="form-label">Princesses</span>
+                <select class="form-control">
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                </select>
+                <span class="select-arrow"></span>
+              </div>
+            </div>
+            <span class="select-arrow"></span>
+            <div class="form-btn">
+              <button class="submit-btn">Check availability</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
