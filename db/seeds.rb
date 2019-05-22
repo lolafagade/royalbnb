@@ -27,7 +27,7 @@ user_id: elsa.id, photo: 'ryktyv36yaxrcqcc095m.jpg')
 
 ariel_castle = Castle.create!(name: "Triton's Castle", description: "Underwater paradise where you'll swim with the most beautiful fishes in the sea",
   prince: 'Prince Eric', location: 'Atlantica Kingdom', equipment: 'palms, seashell bikinis', vehicle: 'No need for a vehicle, swim!',
-  price_per_night: '12', user_id: ariel.id, photo: 'br1pofjhsgbb49prvxnr')
+  price_per_night: '12', user_id: ariel.id, photo: 'br1pofjhsgbb49prvxnr.jpg')
 
 snowwhite_castle = Castle.create!(name: "Forest Cottage", description: "A lovely cottage in the forest, where you'll sing happily with all you animal friends.",
   location: 'Magic Forest', equipment: 'Seven dwarfs', price_per_night: '3', user_id: snowwhite.id, photo: 'ooxbjzljcazjqlhqesnz.jpg')
