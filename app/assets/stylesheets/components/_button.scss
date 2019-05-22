@@ -11,3 +11,37 @@
   }
 }
 
+// style of button to upload photo
+label.myLabel input[type="file"] {
+    position:absolute;
+    top: -1000px;
+}
+
+/***** Example custom styling *****/
+.myLabel {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0.5px solid #FFF;
+    border-radius: 5px;
+    padding: 2px 5px;
+    // margin-top: 2px;
+    background: #DDD;
+    // display: inline-block;
+    color: #585656;
+}
+.myLabel:hover {
+    background: #CCC;
+}
+.myLabel:active {
+    background: #CCF;
+}
+.myLabel :invalid + span {
+    color: #A44;
+}
+.myLabel :valid + span {
+    color: #4A4;
+}
+
+
