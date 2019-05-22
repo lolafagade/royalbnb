@@ -5,4 +5,5 @@ class Castle < ApplicationRecord
   validates :location, presence: true
   validates :price_per_night, presence: true
   validates :photo, presence: true
+  # mount_uploader :photo, PhotoUploader
 end

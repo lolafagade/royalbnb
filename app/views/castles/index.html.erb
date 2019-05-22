@@ -1,4 +1,15 @@
-<div>
+<div class="container">
+  <div class="row mt-4 mb-3">
+    <div class="col">
+      <%= form_tag castles_path, method: :get do %>
+      <%= text_field_tag :query,
+      params[:query],
+      class: "form-control",
+      placeholder: "Find a location or princess"%>
+
+  <% end %>
+    </div>
+  </div>
   <h1>Welcome to Royal BNB</h1>
   <p>Come into the castle of your choice</p>
 
@@ -11,10 +22,8 @@
 
        </div>
 <% end %>
-
-
-
-
+</div>
+<!-- </div> -->
 
 <%= link_to "For more details", castles_path(@castles) %>
 
