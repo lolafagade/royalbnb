@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'bookings/create'
+  get 'bookings/new'
+  get 'booking/create'
+  get 'booking/new'
   devise_for :users
   root to: 'pages#home'
 
@@ -7,7 +11,7 @@ Rails.application.routes.draw do
 
   # AS RENTER
   resources :castles, only: [:index, :show] do
-    resources :bookings, only: [:new, :create]
+    resources :bookings, only: [:create]
   end
 
   # AS OWNER

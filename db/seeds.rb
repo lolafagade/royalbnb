@@ -18,16 +18,28 @@ mulan = User.create!(name: 'Mulan', email: 'mulan@ancient-china.com', password: 
 jasmine_castle = Castle.create!(name: "The Sultan's Palace", description: "Agrabah is located near the Jordan River. It is a city of mystery,
   of enchantment with its sorcerers, genies, and flying carpets.
 Agrabah is based on and is largely inspired by the Iraqi city of Baghdad during the Islamic Golden Age.",
-prince: 'Alladin', location: 'Agrabah', equipment: 'genie in a lamp, tiger', vehicle: 'flying carpet', price_per_night: '5',
+prince: 'Alladin', location: 'Urban', equipment: 'genie in a lamp, tiger', vehicle: 'flying carpet', price_per_night: '5',
 user_id: jasmine.id, photo: 'xaorewukh3xrmznlycff.jpg')
 
 elsa_castle = Castle.create!(name: "The Fair Kingdom", description: "In Arendelle's fair kingdom you can enjoy the beautiful mountains for sun tanning and to go skiing",
-prince: 'Hot prince', location: 'Nordicway', equipment: 'Snow men, birds that can help you get dressed', vehicle: 'A sled ', price_per_night: '6',
+prince: 'Prince Hans', location: 'Urban', equipment: 'Snow men, birds that can help you get dressed', vehicle: 'A sled ', price_per_night: '6',
 user_id: elsa.id, photo: 'ryktyv36yaxrcqcc095m.jpg')
 
 ariel_castle = Castle.create!(name: "Triton's Castle", description: "Underwater paradise where you'll swim with the most beautiful fishes in the sea",
-  prince: 'Prince Eric', location: 'Atlantica Kingdom', equipment: 'palms, seashell bikinis', vehicle: 'No need for a vehicle, swim!',
-  price_per_night: '12', user_id: ariel.id, photo: 'br1pofjhsgbb49prvxnr')
+  prince: 'Prince Eric', location: 'Nature', equipment: 'palms, seashell bikinis', vehicle: 'No need for a vehicle, swim!',
+  price_per_night: '12', user_id: ariel.id, photo: 'br1pofjhsgbb49prvxnr.jpg')
 
 snowwhite_castle = Castle.create!(name: "Forest Cottage", description: "A lovely cottage in the forest, where you'll sing happily with all you animal friends.",
-  location: 'Magic Forest', equipment: 'Seven dwarfs', price_per_night: '3', user_id: snowwhite.id, photo: 'ooxbjzljcazjqlhqesnz.jpg')
+  location: 'Nature', equipment: 'Seven dwarfs', prince: 'Prince not so charming but funny', vehicle: 'On the back of a dwarve!', price_per_night: '3', user_id: snowwhite.id, photo: 'ooxbjzljcazjqlhqesnz.jpg')
+
+belle_castle = Castle.create!(name: "Le Château de la Belle au Bois Dormant", description: "Underwater paradise where you'll swim with the most beautiful fishes in the sea",
+  prince: 'The Beast', location: 'Nature', equipment: 'Books... a lot of books', vehicle: 'White horse that can sing too',
+  price_per_night: '12', user_id: belle.id, photo: 'br1pofjhsgbb49prvxnr.jpg')
+
+cinderella_castle = Castle.create!(name: "The Fair Kingdom", description: "In Arendelle's fair kingdom you can enjoy the beautiful mountains for sun tanning and to go skiing",
+prince: 'Hot prince', location: 'Nature', equipment: 'Snow men, birds that can help you get dressed', vehicle: 'A carriage made from a Pumpkin', price_per_night: '6',
+user_id: cinderella.id, photo: 7'ryktyv36yaxrcqcc095m.jpg')
+
+mulan_castle = Castle.create!(name: "The Fair Kingdom", description: "In Arendelle's fair kingdom you can enjoy the beautiful mountains for sun tanning and to go skiing",
+prince: 'Prince Mao', location: 'Urban', equipment: 'Samurai swords and silk Kimonos', vehicle: 'A sled ', price_per_night: '6',
+user_id: elsa.id, photo: 'ryktyv36yaxrcqcc095m.jpg')

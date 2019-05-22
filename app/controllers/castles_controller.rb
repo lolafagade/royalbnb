@@ -5,5 +5,6 @@ class CastlesController < ApplicationController
 
   def show
     @castle = Castle.find(params[:id])
+    @booking = Booking.new
   end
 end
