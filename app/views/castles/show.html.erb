@@ -1,10 +1,12 @@
 <div class="container">
   <div class="row">
     <div class="col-12 display-photos"><%= cl_image_tag @castle.photo%></div>
-    <div class="col-8"><h1><%= @castle.name %></h1>
-      <p><%= @castle.description %></p>
+    <div class="col-6"><h1><%= @castle.name %></h1>
+      <p><i><%= @castle.description %></i></p>
       <i class="fas fa-toolbox icon"></i> <%= @castle.equipment %></p><p><i class="fas fa-car icon"></i> <%= @castle.vehicle %></p>
       <p><i class="fas fa-frog icon"></i> <%= @castle.prince %></p>
+      </div>
+      <div class="col-2">
       <%= cl_image_tag @castle.user.avatar, crop: :fill, class: 'avatar-large' %>
     </div>
     <div class="col-4">
@@ -49,7 +51,7 @@
             </div>
             <span class="select-arrow"></span>
             <div class="form-btn">
-              <button class="submit-btn">Check availability</button>
+              <button class="submit-btn">Book now!</button>
             </div>
           </div>
         </form>
