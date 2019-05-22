@@ -5,7 +5,7 @@
       <p><%= @castle.description %></p>
       <i class="fas fa-toolbox icon"></i> <%= @castle.equipment %></p><p><i class="fas fa-car icon"></i> <%= @castle.vehicle %></p>
       <p><i class="fas fa-frog icon"></i> <%= @castle.prince %></p>
-      <%= cl_image_tag @castle.user.avatar, height: 200, width: 200, crop: :fill %>
+      <%= cl_image_tag @castle.user.avatar, crop: :fill, class: 'avatar-large' %>
     </div>
     <div class="col-4">
       <div class="booking-form">
