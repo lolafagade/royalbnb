@@ -18,18 +18,18 @@ puts 'creating castles'
 jasmine_castle = Castle.create!(name: "The Sultan's Palace", description: "Agrabah is located near the Jordan River. It is a city of mystery,
   of enchantment with its sorcerers, genies, and flying carpets.
 Agrabah is based on and is largely inspired by the Iraqi city of Baghdad during the Islamic Golden Age.",
-prince: 'Alladin', location: 'Agrabah', equipment: 'genie in a lamp, tiger', vehicle: 'flying carpet', price_per_night: '5',
+prince: 'Alladin', location: 'Urban', equipment: 'genie in a lamp, tiger', vehicle: 'flying carpet', price_per_night: '5',
 user_id: jasmine.id, photo: File.open(Rails.root.join('db/fixtures/castles/jasmine-palace.jpg')))
 
 elsa_castle = Castle.create!(name: "The Fair Kingdom", description: "In Arendelle's fair kingdom you can enjoy the beautiful mountains for sun tanning and to go skiing",
-prince: 'Hot prince', location: 'Nordicway', equipment: 'Snow men, birds that can help you get dressed', vehicle: 'A sled ', price_per_night: '6',
+prince: 'Prince Hans', location: 'Urban', equipment: 'Snow men, birds that can help you get dressed', vehicle: 'A sled ', price_per_night: '6',
 user_id: elsa.id, photo: File.open(Rails.root.join('db/fixtures/castles/elsa_castle.jpg')))
 
 ariel_castle = Castle.create!(name: "Triton's Castle", description: "Underwater paradise where you'll swim with the most beautiful fishes in the sea",
-  prince: 'Prince Eric', location: 'Atlantica Kingdom', equipment: 'palms, seashell bikinis', vehicle: 'No need for a vehicle, swim!',
+  prince: 'Prince Eric', location: 'Nature', equipment: 'palms, seashell bikinis', vehicle: 'No need for a vehicle, swim!',
   price_per_night: '12', user_id: ariel.id, photo: File.open(Rails.root.join('db/fixtures/castles/ariel-castle.jpg')))
 
 snowwhite_castle = Castle.create!(name: "Forest Cottage", description: "A lovely cottage in the forest, where you'll sing happily with all you animal friends.",
-  location: 'Magic Forest', equipment: 'Seven dwarfs', price_per_night: '3', user_id: snowwhite.id, photo: File.open(Rails.root.join('db/fixtures/castles/snowwhite-cottage.jpg')))
+  location: 'Nature', equipment: 'Seven dwarfs', price_per_night: '3', user_id: snowwhite.id, photo: File.open(Rails.root.join('db/fixtures/castles/snowwhite-cottage.jpg')))
 
 puts 'Finished!'

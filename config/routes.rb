@@ -7,7 +7,7 @@ Rails.application.routes.draw do
 
   # AS RENTER
   resources :castles, only: [:index, :show] do
-    resources :bookings, only: [:new, :create]
+    resources :bookings, only: [:create]
   end
 
   # AS OWNER
