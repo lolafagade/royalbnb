@@ -11,7 +11,7 @@
     </div>
     <div class="col-4">
       <h3>Book now!</h3>
-      <%= simple_form_for @booking do |f| %>
+      <%= simple_form_for [@castle, @booking] do |f| %>
       <%= f.error_notification %>
       <%= f.input :check_in_date, as: :date %>
       <%= f.input :chech_out_date, as: :date %>
