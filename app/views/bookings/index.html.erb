@@ -1,0 +1,77 @@
+ <div class="container">
+  <div class="row justify-content-center">
+    <div class="col-12 col-lg-8">
+      <div class="dashboard-card">
+        <h3>Bookings dashboard</h3>
+        <% if current_user.bookings.present? %>
+        <div><h4>Your bookings</div></h4>
+        <div>
+         <% current_user.bookings.each do |booking| %>
+         <div class="booking-card">
+          <div><strong>Destination</strong> <%= booking.castle.name %>!</div>
+          <div><strong>Arrival date</strong> <%= booking.check_in_date %> -
+            <%= (booking.chech_out_date - booking.check_in_date).to_i %>
+            <% if (booking.chech_out_date - booking.check_in_date).to_i > 1 %>
+            nights
+            <% else %> night
+            <% end %>
+          </div>
+          <div><strong>Total price</strong> <%= booking.total_price %> cookies</div>
+        </div>
+        <% end %>
+        <% else %>
+        Your have no bookings at the moment
+        <% end %>
+
+        <% if current_user.castles.present? %>
+        <% current_user.castles.each do |castle| %>
+        <h4>Your bookings for <%= castle.name %></h4>
+        <% if castle.bookings.present? %>
+        <% castle.bookings.each do |booking| %>
+        <!-- <h4>Your castle's bookings</h4> -->
+        <div class="booking-card">
+          <div class="booking-card-top">
+            <div class="booking-card-top-text">
+              <div><strong>Booking status</strong> <%= booking.status %></div>
+              <div><strong>Guest name</strong> <%= booking.user.name %></div>
+              <div><strong>Arrival</strong> <%= booking.check_in_date %></div>
+              <div><strong>Number of nights</strong> <%= (booking.chech_out_date - booking.check_in_date).to_i %></div>
+              <div><strong>Total price</strong> <%= booking.total_price %> cookies</div>
+            </div>
+            <div class="booking-card-top-buttons">
+
+
+
+          <% if booking.status == 'pending' %>
+            <div class='btn-booking-status'>
+            <%= link_to 'Confirm', confirm_booking_path(booking), method: :patch %>
+            </div>
+            <div class='btn-booking-status'>
+            <%= link_to 'Refuse', refuse_booking_path(booking), method: :patch %>
+            </div>
+            <% end %>
+              <!-- <a class="btn-booking-status" href="<%= confirm_booking_path(booking) %>">Confirm</a> -->
+              <!-- <a class="btn-booking-status" href="<%= refuse_booking_path(booking) %>">Refuse</a> -->
+
+
+
+            </div>
+          </div>
+          <% if booking.special_request.present? %>
+          <div class= "special-request"><strong>Your guest has a special request !</strong> <%= booking.special_request %></div>
+          <% end %>
+        </div>
+        <% end %>
+      </div>
+      <% else %>
+      Your castle has no reservations at the moment
+      <% end %>
+      <% end %>
+      <% end %>
+
+    </div>
+  </div>
+</div>
+</div>
+</div>
+
