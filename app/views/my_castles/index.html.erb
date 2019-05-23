@@ -1,0 +1,55 @@
+<div class="container">
+  <h1 class="opening">Welcome to your castles </h1>
+  <a class="btn btn-lg" href="my_castles/new" role="button">Add a Castle</a>
+    <% if current_user.castles.present? %>
+    <%# if @castle.user == current_user %>
+    <% current_user.castles.each do |castle| %>
+  <div class="card row mt-4 mb-3">
+
+
+    <%= cl_image_tag castle.photo, class: "user_photo"%>
+    <h2> <%= castle.name%></h2>
+    <div class="container user_details">
+      <% if castle.description.present? %>
+      <p><strong> Description:</strong> <%= castle.description %></p>
+      <% end %>
+      <% if castle.prince.present? %>
+      <p> <strong>Prince:</strong> <%= castle.prince %> </p>
+      <% end %>
+      <p> <strong>Location:</strong> <%= castle.location %> </p>
+      <p> <strong>Price Per Night:</strong> <%= castle.price_per_night %> <i class="fas fa-cookie"></i> </p>
+      <% if castle.equipment.present? %>
+      <p> <strong>Equipment:</strong> <%= castle.equipment %> </p>
+      <% end %>
+      <% if castle.vehicle.present? %>
+      <p> <strong>Vehicle:</strong> <%= castle.vehicle %> </p>
+      <% end %>
+    </div>
+  </div>
+  <% end %>
+  <% end %>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
