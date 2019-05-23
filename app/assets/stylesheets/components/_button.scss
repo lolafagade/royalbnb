@@ -3,7 +3,23 @@
   background-color: #ff78ae;
   padding: 5px 10px;
   color: white;
+  text-align: center;
   border: 1px solid white;
+  &:hover {
+    color: #fff8cd;
+    text-decoration: none;
+    background-color: #ffa0d2;
+  }
+}
+
+.btn-booking-status {
+  border-radius: 30px;
+  background-color: white;
+  padding: 3px 5px;
+  color: #ff78ae;
+  text-align: center;
+  border: 1px solid #ff78ae;
+  margin: 5px 0;
   &:hover {
     color: #fff8cd;
     text-decoration: none;
