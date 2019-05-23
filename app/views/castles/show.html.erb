@@ -5,57 +5,19 @@
       <p><i><%= @castle.description %></i></p>
       <i class="fas fa-toolbox icon"></i> <%= @castle.equipment %></p><p><i class="fas fa-car icon"></i> <%= @castle.vehicle %></p>
       <p><i class="fas fa-frog icon"></i> <%= @castle.prince %></p>
-      </div>
-      <div class="col-2">
+    </div>
+    <div class="col-2">
       <%= cl_image_tag @castle.user.avatar, crop: :fill, class: 'avatar-large' %>
     </div>
     <div class="col-4">
-      <div class="booking-form">
-        <form>
-          <div class="row">
-            <div class="col-sm-6">
-              <div class="form-group">
-                <span class="form-label">Check In</span>
-                <input class="form-control" type="date" required>
-              </div>
-            </div>
-            <div class="col-sm-6">
-              <div class="form-group">
-                <span class="form-label">Check out</span>
-                <input class="form-control" type="date" required>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-sm-4">
-              <div class="form-group">
-                <span class="form-label">Rooms</span>
-                <select class="form-control">
-                  <option>1</option>
-                  <option>2</option>
-                  <option>3</option>
-                </select>
-                <span class="select-arrow"></span>
-              </div>
-            </div>
-            <div class="col-sm-4">
-              <div class="form-group">
-                <span class="form-label">Princesses</span>
-                <select class="form-control">
-                  <option>1</option>
-                  <option>2</option>
-                  <option>3</option>
-                </select>
-                <span class="select-arrow"></span>
-              </div>
-            </div>
-            <span class="select-arrow"></span>
-            <div class="form-btn">
-              <button class="submit-btn">Book now!</button>
-            </div>
-          </div>
-        </form>
-      </div>
+      <h3>Book now!</h3>
+      <%= simple_form_for [@castle, @booking] do |f| %>
+      <%= f.error_notification %>
+      <%= f.input :check_in_date, as: :date %>
+      <%= f.input :chech_out_date, as: :date %>
+      <%= f.input :special_request, as: :text, placeholder: "Champagne fountains, spiked punch, acid apple" %>
+      <%= f.button :submit, class: "btn btn-primary" %>
+      <% end %>
     </div>
   </div>
 </div>
