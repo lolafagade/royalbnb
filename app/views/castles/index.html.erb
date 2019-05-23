@@ -1,29 +1,35 @@
+<div
+  id="map" class="info-window"
+  style="width: 100%;
+  height: 400px;"
+  data-markers="<%= @markers.to_json %>"
+  data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
+></div>
+
 <div class="container">
+  <h1>Welcome to Royal BNB</h1>
+  <p>Come into the castle of your choice</p>
   <div class="row mt-4 mb-3">
     <div class="col">
       <%= form_tag castles_path, method: :get do %>
       <%= text_field_tag :query,
       params[:query],
-      class: "form-control",
-      placeholder: "Find a location or princess"%>
-
+      class: "form-control search-bar",
+      placeholder: "Find a castle by location or princess..."%>
   <% end %>
     </div>
   </div>
-  <h1>Welcome to Royal BNB</h1>
-  <p>Come into the castle of your choice</p>
-
 
       <%#= cl_image_tag ("zchftnfqqiy3zzzlsswe.jpg") %>
 <% @castles.each do |castle| %>
   <div class="card-category"style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
   url('<%= cl_image_path castle.photo, height: 300, width: 400, crop: :fill %>')">
      <strong><h1><%= link_to castle.name, castle_path(castle.id) %></h1></strong>
-
        </div>
 <% end %>
 </div>
 <!-- </div> -->
 
 <%= link_to "For more details", castles_path(@castles) %>
+
 
