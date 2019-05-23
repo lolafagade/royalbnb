@@ -9,6 +9,14 @@ class CastlesController < ApplicationController
     else
       @castles = Castle.all
     end
+    @castles = Castle.where.not(latitude: nil, longitude: nil)
+    @markers = @castles.map do |castle|
+      {
+        lat: castle.latitude,
+        lng: castle.longitude,
+        infoWindow: render_to_string(partial: "infowindow", locals: { castle: castle })
+      }
+    end
   end
 
   def show
