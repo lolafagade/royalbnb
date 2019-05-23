@@ -1,0 +1,16 @@
+<div class="container">
+<h1>Dear Princess we require some tiny details</h1>
+<p>Your castle is just a button away 🏰</p>
+
+<%= simple_form_for @castle, url: my_castles_path do |f| %>
+  <%= f.input :name %>
+  <%= f.input :description %>
+  <%= f.input :prince %>
+  <%= f.input :location %>
+  <%= f.input :equipment %>
+  <%= f.input :vehicle %>
+  <%= f.input :photo %>
+  <%= f.button :submit, class: "btn btn-primary" %>
+
+<% end %>
+</div>
