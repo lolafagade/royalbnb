@@ -1,0 +1,39 @@
+.opening {
+  color: #f54291;
+}
+
+.card {
+  height: 310px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.user_photo {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card h2 {
+  font-size: 30px;
+  font-weight: bold;
+  margin: 0;
+  text-align: center;
+  color: #f54291;
+}
+
+.card .user_details {
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+}
+
+.btn {
+  background-color: #ff78ae;
+  border-radius: 10px;
+  border: 1px solid white;
+  color: white;
+}
+
