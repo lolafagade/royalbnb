@@ -1,0 +1,15 @@
+<h2>
+  <%= pluralize @castle.reviews.size, "review" %>
+</h2>
+
+<div class="reviews">
+  <% if @castle.reviews.blank? %>
+  Be the first to leave a review for <%= @castle.name %>
+</div>
+<% else %>
+<% @castle.reviews.each do |review| %>
+<div class="review-card">
+  <p><%= review.content %></p>
+</div>
+<% end %>
+<% end %>

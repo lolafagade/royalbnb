@@ -8,6 +8,8 @@ Rails.application.routes.draw do
   # AS RENTER
   resources :castles, only: [:index, :show] do
     resources :bookings, only: [:create]
+    resources :reviews, only: :create
+
   end
 
   # AS OWNER
@@ -22,4 +24,3 @@ Rails.application.routes.draw do
     end
   end
 end
-
