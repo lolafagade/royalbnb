@@ -22,21 +22,8 @@
       <% end %>
     </div>
   </div>
-</div>
-
-
-<h2>
-  <%= pluralize @castle.reviews.size, "review" %>
-</h2>
-
-<div id="reviews">
-  <% if @castle.reviews.blank? %>
-    Be the first to leave a review for <%= @castle.name %>
-  <% else %>
-    <% @castle.reviews.each do |review| %>
-      <%= render 'reviews/show', review: review %>
-    <% end %>
-  <% end %>
-</div>
-
+<%= render 'reviews/show', castle: @castle, review: @review %>
 <%= render 'reviews/form', castle: @castle, review: @review %>
+</div>
+
+

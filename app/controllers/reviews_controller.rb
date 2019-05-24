@@ -3,10 +3,16 @@ class ReviewsController < ApplicationController
     @castle = Castle.find(params[:castle_id])
     @review = Review.new(review_params)
     @review.castle = @castle
-    if @castle.save
-      redirect_to castle_path(@castle)
+    if @review.save
+      respond_to do |format|
+      format.html { redirect_to castle_path(@castle) }
+      format.js
+      end
     else
-      render 'castle/show'
+      respond_to do |format|
+        format.html { render 'castles/show' }
+        format.js
+      end
     end
   end
 
