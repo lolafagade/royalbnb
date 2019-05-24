@@ -1,6 +1,6 @@
-<h2>
-  <%= pluralize @castle.reviews.size, "review" %>
-</h2>
+<div class="review-count"><strong>This castle has
+  <%= pluralize @castle.reviews.size, "review" %></strong>
+</div>
 
 <div class="reviews">
   <% if @castle.reviews.blank? %>
@@ -8,7 +8,7 @@
 </div>
 <% else %>
 <% @castle.reviews.each do |review| %>
-<div class="review-card">
+<div class="review-card-card">
   <p><%= review.content %></p>
 </div>
 <% end %>

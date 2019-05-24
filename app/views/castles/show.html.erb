@@ -11,41 +11,42 @@
         <div class= "col-11">
           <div class="castle-page-card">
 
-            <div class="col-8"><h1><%= @castle.name %></h1>
+            <div class="col-7"><h1><%= @castle.name %></h1>
               <p><i><%= @castle.description %></i></p>
               <%= cl_image_tag @castle.user.avatar, crop: :fill, class: 'avatar-large' %> Your host will be <%= @castle.user.name %>
               <p></p>
               <div class="equipment-card">
-              <i class="fas fa-charging-station"></i> <%= @castle.equipment %></br>
-              <i class="fas fa-car"></i> <%= @castle.vehicle %></br>
-              <i class="fas fa-frog"></i> <%= @castle.prince %>
+                <i class="fas fa-charging-station"></i> <%= @castle.equipment %></br>
+                <i class="fas fa-car"></i> <%= @castle.vehicle %></br>
+                <i class="fas fa-frog"></i> <%= @castle.prince %>
               </div>
+              <%= render 'reviews/show', castle: @castle, review: @review %>
+              <%= render 'reviews/form', castle: @castle, review: @review %>
             </div>
+          </div>
+          <div class="dashboard-card">
 
-
-            <div class="dashboard-card">
-
-              <h3>Book now!</h3>
-              <%= simple_form_for [@castle, @booking] do |f| %>
-              <%= f.error_notification %>
-              <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
-              <%= f.input :check_in_date, as: :date %>
-              <%= f.input :chech_out_date, as: :date %>
-              <%= f.input :special_request, as: :text, placeholder: "Champagne fountains, spiked punch, acid apple" %>
-              <%#= f.button :submit, method: :patch %>
-              <%= f.button :submit, class: 'btn-homepage' %>
-              <% end %>
-
-            </div>
+            <h3>Book now!</h3>
+            <%= simple_form_for [@castle, @booking] do |f| %>
+            <%= f.error_notification %>
+            <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+            <%= f.input :check_in_date, as: :date %>
+            <%= f.input :chech_out_date, as: :date %>
+            <%= f.input :special_request, as: :text, placeholder: "Champagne fountains, spiked punch, acid apple" %>
+            <%#= f.button :submit, method: :patch %>
+            <%= f.button :submit, class: 'btn-homepage' %>
+            <% end %>
 
           </div>
         </div>
-
       </div>
+
+
+
     </div>
-
-
   </div>
-  <%= render 'reviews/show', castle: @castle, review: @review %>
-  <%= render 'reviews/form', castle: @castle, review: @review %>
+
 </div>
+</div>
+
+
