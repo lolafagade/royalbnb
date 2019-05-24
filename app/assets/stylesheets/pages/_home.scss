@@ -1,6 +1,13 @@
 // Specific CSS for your home-page
-body {
+.site {
   background-color: #fff8CD;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.site-content {
+  flex: 1;
 }
 
 .page-margin {

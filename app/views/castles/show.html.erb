@@ -13,10 +13,12 @@
       <h3>Book now!</h3>
       <%= simple_form_for [@castle, @booking] do |f| %>
       <%= f.error_notification %>
+      <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
       <%= f.input :check_in_date, as: :date %>
       <%= f.input :chech_out_date, as: :date %>
       <%= f.input :special_request, as: :text, placeholder: "Champagne fountains, spiked punch, acid apple" %>
-      <%= f.button :submit, class: "btn btn-primary" %>
+      <%#= f.button :submit, method: :patch %>
+      <%= f.button :submit, class: 'btn-homepage' %>
       <% end %>
     </div>
   </div>

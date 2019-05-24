@@ -30,5 +30,13 @@
   font-family: 'Macondo Swash Caps', cursive;
   font-size: 50px;
   text-shadow: -2px 0 #ff78ae, 0 2px #ff78ae, 2px 0 #ff78ae, 0 -2px #ff78ae;
-
+  a {
+    font-family: 'Macondo Swash Caps', cursive;
+    color: white;
+  }
+  a:hover {
+    text-decoration: none;
+    text-shadow: none;
+    color: #ff78ae;
+  }
 }

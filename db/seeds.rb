@@ -18,9 +18,9 @@ pocahontas = User.create!(name: 'Pocahontas', email: 'poca@cherokeelove.com', pa
 
 puts 'creating castles'
 
-jasmine_castle = Castle.create!(name: "The Sultan's Palace", description: "Agrabah is located near the Jordan River. It is a city of mystery,
-  of enchantment with its sorcerers, genies, and flying carpets. Agrabah is based on and is largely inspired by the Iraqi city of Baghdad during the Islamic Golden Age.",
-prince: 'Alladin', location: 'Taj East Gate Rd, Eastern Gate Taj Mahal, Forest Colony, Tajganj, Agra, Uttar Pradesh 282001, India', equipment: 'genie in a lamp, tiger', vehicle: 'flying carpet', price_per_night: '5',
+jasmine_castle = Castle.create!(name: "The Sultan's Palace", description: "Agrabah is a city of mystery,
+  of enchantment with its sorcerers, genies, and flying carpets.",
+prince: 'Alladin', location: 'Urban', equipment: 'genie in a lamp, tiger', vehicle: 'flying carpet', price_per_night: '5',
 user_id: jasmine.id, photo: File.open(Rails.root.join('db/fixtures/castles/jasmine-palace.jpg')))
 
 elsa_castle = Castle.create!(name: "The Fair Kingdom", description: "In Arendelle's fair kingdom you can enjoy the beautiful mountains for sun tanning and to go skiing",
