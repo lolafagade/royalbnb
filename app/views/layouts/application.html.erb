@@ -8,12 +8,12 @@
     <%= action_cable_meta_tag %>
     <%= stylesheet_link_tag 'application', media: 'all' %>
     <link href="https://fonts.googleapis.com/css?family=Macondo+Swash+Caps&display=swap" rel="stylesheet">
-    <%#= stylesheet_pack_tag 'application', media: 'all' %> <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
-<!--     <style>
+    <%= stylesheet_pack_tag 'application', media: 'all' %>
+    <style>
       body {
         background-color: #fff8cd;
       }
-    </style> -->
+    </style>
   </head>
   <body class="site">
     <%= render 'shared/navbar' %>
