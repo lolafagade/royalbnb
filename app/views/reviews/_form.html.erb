@@ -1,0 +1,11 @@
+<div class="reviews">
+
+<%= simple_form_for [ castle, review ] do |form| %>
+
+
+<div class="form-group">
+  <%= form.input :content, placeholder: "hallo", label: false %>
+  <%= form.button :submit %>
+</div>
+<% end %>
+</div>
