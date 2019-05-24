@@ -1,17 +1,32 @@
 <div class="container">
-<h1>Dear Princess we require some tiny details</h1>
+  <div class="page-margin">
+  <div class="row justify-content-center">
+    <div class= "col-12 col-lg-8">
+ <h2 class="title-royalbnb">Add your castle</h2>
 <p>Your castle is just a button away 🏰</p>
 
 <%= simple_form_for @castle, url: my_castles_path do |f| %>
   <%= f.input :name %>
   <%= f.input :description %>
-  <%= f.input :prince %>
   <%= f.input :location %>
+  <%= f.input :prince %>
   <%= f.input :price_per_night %>
   <%= f.input :equipment %>
   <%= f.input :vehicle %>
-  <%= f.input :photo %>
-  <%= f.button :submit, class: "btn btn-primary" %>
+
+<div>
+          <label class="myLabel">
+            <span>Upload your castle picture</span>
+            <%= f.input :photo, id: 'upload-photo', label: false %>
+          </label>
+          <%= f.input :photo_cache, as: :hidden %>
+        </div>
+
+  <%#= f.input :photo %>
+  <%= f.button :submit, class: 'btn-homepage' %>
 
 <% end %>
+</div>
+</div>
+</div>
 </div>

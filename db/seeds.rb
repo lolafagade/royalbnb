@@ -15,9 +15,8 @@ mulan = User.create!(name: 'Mulan', email: 'mulan@ancient-china.com', password: 
 
 puts 'creating castles'
 
-jasmine_castle = Castle.create!(name: "The Sultan's Palace", description: "Agrabah is located near the Jordan River. It is a city of mystery,
-  of enchantment with its sorcerers, genies, and flying carpets.
-Agrabah is based on and is largely inspired by the Iraqi city of Baghdad during the Islamic Golden Age.",
+jasmine_castle = Castle.create!(name: "The Sultan's Palace", description: "Agrabah is a city of mystery,
+  of enchantment with its sorcerers, genies, and flying carpets.",
 prince: 'Alladin', location: 'Urban', equipment: 'genie in a lamp, tiger', vehicle: 'flying carpet', price_per_night: '5',
 user_id: jasmine.id, photo: File.open(Rails.root.join('db/fixtures/castles/jasmine-palace.jpg')))
 
