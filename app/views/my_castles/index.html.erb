@@ -1,56 +1,47 @@
-<div class="container">
-  <h1 class="opening">My castles dashboard </h1>
-  <a class="btn btn-lg" href="my_castles/new" role="button">Add a Castle</a>
-    <% if current_user.castles.present? %>
+ <div class="container">
+  <div class="row justify-content-center">
+    <div class="col-12 col-lg-8">
+      <div class="dashboard-card">
+        <h3>My castles dashboard</h3>
+  <div class="my-castle-create">
+    <div>You have a castle that you want to add? Click here !</div>
+    <div><a class="btn btn-homepage" href="my_castles/new" role="button">Add a Castle</a></div>
+  </div>
+   <% if current_user.castles.present? %>
     <%# if @castle.user == current_user %>
     <% current_user.castles.each do |castle| %>
-  <div class="row mt-4 mb-3">
-  <div class="card">
-
-
-    <%= cl_image_tag castle.photo, class: "user_photo"%>
-    <h2> <%= castle.name%></h2>
-    <div class="container user_details">
-      <% if castle.description.present? %>
-      <p><strong> Description:</strong> <%= castle.description %></p>
-      <% end %>
-      <% if castle.prince.present? %>
-      <p> <strong>Prince:</strong> <%= castle.prince %> </p>
-      <% end %>
-      <p> <strong>Location:</strong> <%= castle.location %> </p>
-      <p> <strong>Price Per Night:</strong> <%= castle.price_per_night %> <i class="fas fa-cookie"></i> </p>
-      <% if castle.equipment.present? %>
-      <p> <strong>Equipment:</strong> <%= castle.equipment %> </p>
-      <% end %>
-      <% if castle.vehicle.present? %>
-      <p> <strong>Vehicle:</strong> <%= castle.vehicle %> </p>
-      <% end %>
+  <div class="booking-card">
+    <h4> <%= castle.name%></h4>
+    <%# if castle.description.present? %>
+      <!-- <p><strong> Description:</strong> <%#= castle.description %></p> -->
+    <%# end %>
+    <%# if castle.prince.present? %>
+      <!-- <p> <strong>Prince:</strong> <%= castle.prince %> </p> -->
+    <%# end %>
+    <!-- <p> <strong>Location:</strong> <%#= castle.location %> </p> -->
+    <p> Your price per night: <%= castle.price_per_night %> <i class="fas fa-cookie"></i> </p>
+    Your picture :
+    <%= cl_image_tag castle.photo, class: 'my-castle-picture' %>
+    <%# if castle.equipment.present? %>
+      <!-- <p> <strong>Equipment:</strong> <%= castle.equipment %> </p> -->
+    <%# end %>
+    <%# if castle.vehicle.present? %>
+      <!-- <p> <strong>Vehicle:</strong> <%= castle.vehicle %> </p> -->
+    <%# end %>
+  </div>
+    <% end %>
+      </div>
     </div>
   </div>
-  </div>
   <% end %>
-  <% end %>
+
+
+
+
+
+
+
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

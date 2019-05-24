@@ -1,34 +1,49 @@
-.opening {
-  color: #f54291;
-}
-
-.card {
-  height: 330px;
-  width: 100%;
-  object-fit: cover;
-}
-
-.user_photo {
-  height: 200px;
-  width: 100%;
-  object-fit: cover;
-}
-
-.card h2 {
-  font-size: 30px;
-  font-weight: bold;
-  margin: 0;
-  text-align: center;
-  color: #f54291;
-}
-
-.card .user_details {
-  padding: 16px;
+.my-castle-create {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  position: relative;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 20px;
 }
+
+.my-castle-picture {
+  width: 100%;
+}
+
+
+
+
+
+// .opening {
+//   color: #f54291;
+// }
+
+// .card {
+//   height: 330px;
+//   width: 100%;
+//   object-fit: cover;
+// }
+
+// .user_photo {
+//   height: 200px;
+//   width: 100%;
+//   object-fit: cover;
+// }
+
+// .card h2 {
+//   font-size: 30px;
+//   font-weight: bold;
+//   margin: 0;
+//   text-align: center;
+//   color: #f54291;
+// }
+
+// .card .user_details {
+//   padding: 16px;
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: flex-end;
+//   position: relative;
+// }
 
 .btn {
   background-color: #ff78ae;
