@@ -10,7 +10,9 @@ class CastlesController < ApplicationController
     else
       @castles = Castle.all
     end
-    @castles = Castle.where.not(latitude: nil, longitude: nil)
+
+
+    @castles = @castles.where.not(latitude: nil, longitude: nil)
     @markers = @castles.map do |castle|
       {
         lat: castle.latitude,
