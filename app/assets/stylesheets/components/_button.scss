@@ -16,14 +16,16 @@
   border-radius: 30px;
   background-color: white;
   padding: 3px 5px;
-  color: #ff78ae;
+  // color: #585858;
   text-align: center;
   border: 1px solid #ff78ae;
   margin: 5px 0;
-  &:hover {
-    color: #fff8cd;
+  a{
+    color: #ff78ae;
+  }
+  a:hover {
+    opacity: 0.4;
     text-decoration: none;
-    background-color: #ffa0d2;
   }
 }
 
