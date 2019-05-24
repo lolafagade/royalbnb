@@ -1,25 +1,49 @@
 <div class="container">
   <div class="row">
-    <div class="col-12 display-photos"><%= cl_image_tag @castle.photo%></div>
-    <div class="col-6"><h1><%= @castle.name %></h1>
-      <p><i><%= @castle.description %></i></p>
-      <i class="fas fa-toolbox icon"></i> <%= @castle.equipment %></p><p><i class="fas fa-car icon"></i> <%= @castle.vehicle %></p>
-      <p><i class="fas fa-frog icon"></i> <%= @castle.prince %></p>
+
+
+
+    <div class="col-12 display-photos"><%= cl_image_tag @castle.photo%>
     </div>
-    <div class="col-2">
-      <%= cl_image_tag @castle.user.avatar, crop: :fill, class: 'avatar-large' %>
+
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class= "col-11">
+          <div class="castle-page-card">
+
+            <div class="col-8"><h1><%= @castle.name %></h1>
+              <p><i><%= @castle.description %></i></p>
+              <%= cl_image_tag @castle.user.avatar, crop: :fill, class: 'avatar-large' %> Your host will be <%= @castle.user.name %>
+              <p></p>
+              <div class="equipment-card">
+              <p><i class="fas fa-charging-station"></i> <%= @castle.equipment %></p>
+              <p><i class="fas fa-car"></i> <%= @castle.vehicle %></p>
+              <p><i class="fas fa-frog"></i> <%= @castle.prince %></p>
+              </div>
+            </div>
+
+
+            <div class="dashboard-card">
+
+              <h3>Book now!</h3>
+              <%= simple_form_for [@castle, @booking] do |f| %>
+              <%= f.error_notification %>
+              <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+              <%= f.input :check_in_date, as: :date %>
+              <%= f.input :chech_out_date, as: :date %>
+              <%= f.input :special_request, as: :text, placeholder: "Champagne fountains, spiked punch, acid apple" %>
+              <%#= f.button :submit, method: :patch %>
+              <%= f.button :submit, class: 'btn-homepage' %>
+              <% end %>
+
+            </div>
+
+          </div>
+        </div>
+
+      </div>
     </div>
-    <div class="col-4">
-      <h3>Book now!</h3>
-      <%= simple_form_for [@castle, @booking] do |f| %>
-      <%= f.error_notification %>
-      <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
-      <%= f.input :check_in_date, as: :date %>
-      <%= f.input :chech_out_date, as: :date %>
-      <%= f.input :special_request, as: :text, placeholder: "Champagne fountains, spiked punch, acid apple" %>
-      <%#= f.button :submit, method: :patch %>
-      <%= f.button :submit, class: 'btn-homepage' %>
-      <% end %>
-    </div>
+
+
   </div>
 </div>

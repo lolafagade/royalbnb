@@ -1,0 +1,17 @@
+.castle-page-card {
+  display: flex;
+  background-color: white;
+  margin-bottom: 30px;
+  padding: 20px 30px;
+  justify-content: space-between;
+  flex-grow: 1;
+  h1 {
+  font-family: 'Macondo Swash Caps', cursive;
+  }
+}
+
+.equipment-card {
+  border: 0.5px solid #dad9d9;
+  padding: 10px;
+  margin-right: 20px;
+}
